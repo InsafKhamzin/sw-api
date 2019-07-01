@@ -40,12 +40,12 @@ export default class PersonDetails extends Component {
   }
 
   render() {
+    
     if (!this.state.person) {
       return <span>Select a person from the list</span>;
     }
 
     const { person, personLoading } = this.state;
-
     const content = personLoading ? <Spinner /> : <PersonView person={person}/>
     return (
       <div className="person-details card">
