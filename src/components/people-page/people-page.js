@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './people-page.css';
-import PersonDetails from '../person-details';
+import ItemDetails from '../item-details';
 import ItemList from '../item-list';
 import ErrorIndicator from '../error-indicator';
 import SwapiService from '../../services/swapi-service';
@@ -46,11 +46,11 @@ export default class PeoplePage extends Component {
             </ItemList>
         );
 
-        const personDetails = (<PersonDetails personId={this.state.selectedPerson} />);
+        const itemDetails = (<ItemDetails itemId={this.state.selectedPerson} />);
 
         return (
             <ErrorBoundry>
-                <Row left={itemList} right={personDetails} />
+                <Row left={itemList} right={itemDetails} />
             </ErrorBoundry>
         );
     }
