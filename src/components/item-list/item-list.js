@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './item-list.css';
 
@@ -14,7 +14,7 @@ const ItemList = (props) => {
     return (
       <li className="list-group-item"
         key={id}
-        onClick={() => this.props.onItemSelected(id)}>
+        onClick={() => onItemSelected(id)}>
         {label}
       </li>);
   });
